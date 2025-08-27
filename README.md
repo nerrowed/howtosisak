@@ -20,8 +20,8 @@ https://sisak1.polsri.ac.id/mahasiswa/
 
 `TOKEN=$(grep -oP 'name="csrf_has_name" value="\K[^"]+' login.html)`  
 #### Penjelasan Command  
-`TOKEN=..` ikin variabel di shell bernama TOKEN  
-`$(. . .)` ommand Substitution -> jalankan perintah didalamnya dan ambil outputnya  
+`TOKEN=..` bikin variabel di shell bernama TOKEN  
+`$(. . .)` command Substitution -> jalankan perintah didalamnya dan ambil outputnya  
 `grep ..`  cari teks  
 `-o`       hanya tampilkan bagian yang cocok bukan seluruh baris  
 `-P`       pakai PCRE (REGEX YANG LEBIH KUAT)    
