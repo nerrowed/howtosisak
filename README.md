@@ -6,9 +6,9 @@ Repo ini berisi dokumentasi cara login ke [SISAK Polsri](https://sisak1.polsri.a
 ### 1. Ambil halaman login
 Kita perlu ambil cookie awal + CSRF token.
 
-curl -s -k -c cookie.txt -o login.html \
--H "User-Agent: Mozilla/5.0" \
-https://sisak1.polsri.ac.id/mahasiswa/
+curl -s -k -c cookie.txt -o login.html \  
+-H "User-Agent: Mozilla/5.0" \  
+https://sisak1.polsri.ac.id/mahasiswa/  
 
 #### Penjelasan Command
 `-s` silent mode, untuk lebih sedikit output  
