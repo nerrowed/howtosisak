@@ -6,9 +6,9 @@ Repo ini berisi dokumentasi cara login ke [SISAK Polsri](https://sisak1.polsri.a
 ### 1. Ambil halaman login
 Kita perlu ambil cookie awal + CSRF token.
 
-`curl -s -k -c cookie.txt -o login.html \  `  
-`-H "User-Agent: Mozilla/5.0" \  `  
-`https://sisak1.polsri.ac.id/mahasiswa/  `  
+curl -s -k -c cookie.txt -o login.html \\  
+-H "User-Agent: Mozilla/5.0" \\  
+https://sisak1.polsri.ac.id/mahasiswa/  
 
 #### Penjelasan Command
 `-s` silent mode, untuk lebih sedikit output  
@@ -33,13 +33,13 @@ Kita perlu ambil cookie awal + CSRF token.
 #### Hasilnya variabel token akan berisi CSRF  
 
 ### 3. Kirim Login Form Dengan Cookie + Token  
-`curl -s -k -L -i -b cookie.txt -c cookie.txt \ `   
-`-H "User-Agent: Mozilla/5.0" \ `   
-`-H "Content-Type: application/x-www-form-urlencoded" \  `  
-`-H "Referer: https://sisak1.polsri.ac.id/mahasiswa/" \   `  
-`-H "Origin: https://sisak1.polsri.ac.id" \  `   
-`--data "username=[Usernamemu]&password=[Passwordmu]&csrf_has_name=$TOKEN" \   `  
-`https://sisak1.polsri.ac.id/mahasiswa/site/login   `  
+curl -s -k -L -i -b cookie.txt -c cookie.txt \\  
+-H "User-Agent: Mozilla/5.0" \\  
+-H "Content-Type: application/x-www-form-urlencoded" \\  
+-H "Referer: https://sisak1.polsri.ac.id/mahasiswa/" \\  
+-H "Origin: https://sisak1.polsri.ac.id" \\  
+--data "username=[Usernamemu]&password=[Passwordmu]&csrf_has_name=$TOKEN" \\  
+https://sisak1.polsri.ac.id/mahasiswa/site/login  
 
 #### Penjelasan Command  
 `-L` follow redirect, jadi setelah login langsung redirect ke halaman /beranda  
